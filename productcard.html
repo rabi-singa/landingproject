@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+
+    <style>
+        .wrap{
+            margin: 0;
+            background-color: rgb(224, 224, 224);
+            display: flex;
+            justify-content: center;  
+            align-items: center;       
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .product-card{
+            display: flex;
+            flex-direction: column;
+            width: 270px;
+            height: 340px;
+            background-color: white;
+            border-radius: 7px;
+            border: 1px solid rgba(0, 0, 0, 0.764);
+            overflow: hidden;
+        }
+        .pto{
+            width: 270px;
+            height: 150px;
+            background-color: rgba(192, 148, 148, 0.679);
+        }
+        .number{
+            color: rgb(106, 105, 105);
+            margin: 0;
+            height: 150px;
+            display: flex;
+            justify-content: center;  
+            align-items: center;      
+        }
+        .second{
+            padding: 9px;
+        }
+        .product{
+            margin: 0;
+            padding: 7px 0;
+            
+        }
+        .description{
+            margin: 0;
+        }
+        .price{
+            display: flex;
+            justify-content: space-between;
+        }
+        .rupees{
+            color: green;
+            margin: 0;
+            padding: 17px 0 10px;
+        }
+        .point{
+            margin: 0;
+            padding: 17px 0 10px;
+        }
+        .button{
+            background-color: rgba(64, 64, 250, 0.942);
+            color: white;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body class="wrap">
+
+    <div class="product-card">
+
+        <div class="pto">
+            <h1 class="number"> 200 X 400 </h1>
+        </div>
+        <div class="second">
+            <div class="name">
+                <h3 class="product"> Product Name </h3>
+                <p class="description"> A brief description of the product goes here. It should be concise yet informative. </p>
+            </div>
+
+            <div class="price">
+                <h3 class="rupees"> $99.99 </h3>
+                <p class="point"> (4.5) </p>   
+            </div>
+
+            <button class="button"> Add to Cart </button>
+        
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+    .sticky {
+      position: sticky;
+      top: 20px;
+      left: 60px;
+      z-index: 1;
+
+      background-color: red;
+      height: 30px;
+      width: 80px;
+      color: white;
+    }
+
+    .fixed {
+      position: fixed;
+      top: 50px;
+      right: 200px;
+
+      background-color: green;
+      height: 30px;
+      width: 80px;
+      color: white;
+    }
+
+    .relative {
+      position: relative;
+      left: 20px;
+      bottom: 50px;
+      z-index: -1;
+
+      background-color: blue;
+      height: 30px;
+      width: 80px;
+      color: white;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 20px;
+      left: 200px;
+
+      background-color: orange;
+      height: 30px;
+      width: 80px;
+      color: white;
+    }
+
+    /*  */
+
+    .parent-relative {
+      position: relative;
+
+      margin: auto;
+      background-color: gray;
+      height: 200px;
+      width: 200px;
+      color: white;
+    }
+    .child-absolute {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      translate: -50% -50%;
+
+      background-color: rgba(128, 0, 128, 0.685);
+      height: 60px;
+      width: 60px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <p>Lorem..</p>
+  
+  <div class="sticky">
+    sticky
+  </div>
+
+  <div class="fixed">
+    fixed
+  </div>
+
+  <div class="relative">
+    relative
+  </div>
+
+  <div class="absolute">
+    absolute
+  </div>
+
+  <section class="parent-relative">
+    <div class="child-absolute">
+      absolute
+    </div>
+  </section>
+
+  <p>Lorem..</p>
+
+</body>
+</html>

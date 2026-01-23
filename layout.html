@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Layout</title>
+
+    <style>
+        
+        .wrapper{
+            display: flex;
+            justify-content: center;  
+            align-items: center;       
+            height: 100vh;
+            gap: 7px;
+            margin: 0 5px;
+        }
+        .left{
+            background-color: rgba(128, 128, 128, 0.741);
+            display: flex;
+            gap: 16px;
+            border-radius: 6px;
+            border: solid 1px black;
+            gap: 9px;
+        }
+        .profile{
+            border-radius: 15px;
+            width: 170px;
+            height:250px;
+            padding: 10px;
+            object-fit: cover;
+        }
+        .word-head{
+            border-bottom: 1px solid rgb(226, 36, 11);
+        }
+        .icons{
+            color: rgba(255, 68, 0, 0.668);
+        }
+        .down-name{
+            font-size: 15px;
+            margin: 0;
+        }
+        .link{
+            font-size: 12px;
+            text-decoration: none;
+            padding: 0;
+            color: rgba(0, 0, 255, 0.638);
+        }
+        .down{
+            padding: 50px 65px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: left;
+            background-color: red;
+        }
+        .left .down-name{
+            color: white;
+        }
+
+        .right{
+            background-color: rgba(128, 128, 128, 0.741);
+            display: flex;
+            gap: 16px;
+            border-radius: 6px;
+            border: solid 1px black;
+            gap: 9px;
+            color: white;
+        }
+        .down-name{
+            color: black;
+        }
+    </style>
+</head>
+<body class="wrapper">
+    <section class="left-section">
+        <div class="left">
+            
+            <img class="profile" src="https://i.pinimg.com/736x/49/d4/9a/49d49afa83d1d79be2e23cd58cd8273e.jpg" alt="">
+            
+            <div class="word">
+                <h2 class="word-head"> You have right place </h2>
+                <p class="para"> Everyone has a place where they feel most comfortable, and for me, that place is my home. It is a calm and serene environment where I can truly relax and be myself. I live there with my family and the seperate room allow for both privacy. </p>
+                <div class="icons">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="down">
+                    <h1 class="down-name"> S. Rabi </h1>
+                    <a class="link" href="#"> Developer </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="right-section">
+        <div class="right">
+            
+            <img class="profile" src="https://i.pinimg.com/736x/2b/a2/45/2ba2455ca817f7659e9ebfe9d494c5db.jpg" alt="">
+            
+            <div class="word">
+                <h2 class="word-head"> You have right place </h2>
+                <p class="para"> Everyone has a place where they feel most comfortable, and for me, that place is my home. It is a calm and serene environment where I can truly relax and be myself. I live there with my family and the seperate room allow for both privacy. </p>
+            <div class="icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="down">
+                <h1 class="down-name"> Mr. Dreamer </h1>
+                <a class="link" href="#"> Developer </a>
+            </div>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>

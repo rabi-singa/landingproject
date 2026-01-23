@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(189, 188, 188);
+        }
+        .top{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo{
+            padding: 15px 0 0 0;
+            font-size: 40px;
+            color: blue;
+        }
+        .contain{
+            width: 250px;
+            padding: 0;
+            border-radius: 7px;
+            background-color: white;
+            box-shadow: 0 9px 20px gray;
+        }
+        .contain h2{
+            display: flex;
+            justify-content: center;
+            padding: 0 0 30px;
+        }
+        .loginBox{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            padding:9px; 
+        }
+        .loginBox input{
+            border-radius: 5px;
+            border: solid rgba(0, 0, 0, 0.329) 1px;
+            height: 30px;
+            background-color: rgb(227, 227, 227);
+        }
+        .loginBox button{
+            cursor: pointer;
+            color: white;
+            height: 30px;  
+        }
+        .log{
+            border-radius: 30px;
+            border: none;
+            background-color: blue;
+        }
+        .loginBox a{
+            text-decoration: none;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.512);
+            font-size: 14px;
+            color: blue;
+        }
+        .create{
+            width: 140px;
+            margin-top: 9px;
+            margin-left: 45px;
+            border-radius: 5px;
+            background-color: green;
+            border: solid black 1px;
+        }
+        .down{
+            display: flex;
+            justify-content: center;
+            font-size: 8px;
+            text-decoration: none;
+            gap: 15px;
+            padding: 30px 0 5px 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .down a{
+            text-decoration: none;
+        }
+        .foot{
+            display: flex;
+            justify-content: center;
+            font-size: 8px;
+            padding: 5px 0 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="contain">
+            <div class="top">
+                <i class="fa-brands fa-facebook logo"></i>
+                <h2> Facebook Login! </h2>
+            </div>
+            
+
+            <form class="loginBox">
+                <input type="text" placeholder=" Email or phone number ">
+                <input type="password" placeholder=" Password ">
+                <button class="log"> Log in </button>
+                <a href="#"> Forgot Password? </a>
+                <button class="create"> Create new account </button>   
+            </form>
+
+            <div class="down">
+                <a href="#">About</a>
+                <a href="#">Help</a>
+                <a href="#">More</a>
+            </div>
+
+            <footer class="foot"></i> Meta <i class="fa-regular fa-copyright"></i> 2026 </footer>
+        </div>
+        
+    </div>
+</body>
+</html>

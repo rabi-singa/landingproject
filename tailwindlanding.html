@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tailwind Landing</title>
+</head>
+
+<body class="bg-gray-200">
+    <marquee class="bg-black font-bold text-white">Sample Page</marquee>
+    <nav class="bg-white px-[10px] py-2">
+        <div class="flex justify-between items-center">
+            <div>
+                <h1 class="font-bold text-[25px]">Nexcent</h1>
+            </div>
+
+            <div class="max-md:hidden flex items-center gap-8 text-[11px]">
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">Community</a>
+                <a href="#">Blog</a>
+                <a href="#">Pricing</a>
+                <a class="max-sm:hidden bg-green-600 text-white w-[130px] h-[35px] rounded-[3px] flex justify-center items-center gap-2"
+                    href="#">Register Now <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <div class="hidden max-md:block"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <section class="max-md:flex-col px-3 bg-slate-100 py-15 flex justify-evenly">
+        <div>
+            <h1 class="text-4xl font-bold">Lessons and insights <br /> <span class="text-green-600">from 8
+                    years</span></h1>
+
+            <p class="py-5 text-[11px] text-gray-500">Where to grow your business as a photographer: site or social
+                media?</p>
+
+            <button
+                class="bg-green-600 text-white hover:bg-black w-[89px] h-[36px] rounded-[3px] text-[11px]">Register</button>
+        </div>
+        <img class="max-sm:hidden w-60 h-60" src="landing.png" alt="">
+    </section>
+
+    <section class="bg-white py-8 px-3">
+        <div class="text-center">
+            <h1 class="text-[20px] font-semibold">Our Clients</h1>
+            <p class="text-[11px] text-gray-500">We have been working with some Forture 500+ cliets</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-10 place-items-center">
+        <!-- <div class="flex justify-evenly text-[30px] py-10"> -->
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook-messenger"></i>
+            <i class="fa-brands fa-square-threads"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-square-whatsapp"></i>
+        </div>
+    </section>
+    <section class="bg-white px-3">
+        <div class="px-4 text-center">
+
+            <div class="text-center">
+                <h1 class="text-[20px] font-semibold">Manage your entire community <br /> in a single system</h1>
+                <p class="text-[11px] text-gray-500">Who is Nextcent suitable for?</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
+                <div class="text-center">
+                    <i class="fa-solid fa-users text-[30px]"></i>
+                    <h1 class="text-[20px] font-semibold py-2">Membership Organisations</h1>
+                    <p class="text-gray-500 text-[10px]">Our membership management software provides full automation
+                        ofmembership renewals and payments</p>
+                </div>
+
+                <div class="text-center">
+                    <i class="fa-solid fa-city text-[30px]"></i>
+                    <h1 class="text-[20px] font-semibold py-2">National Associations</h1>
+                    <p class="text-gray-500 text-[10px]">Our membership management software provides full automation
+                        ofmembership renewals and payments</p>
+                </div>
+
+                <div class="text-center">
+                    <i class="fa-solid fa-handshake text-[30px]"></i>
+                    <h1 class="text-[20px] font-semibold py-2">Clubs And Groups</h1>
+                    <p class="text-gray-500 text-[10px]">Our membership management software provides full automation
+                        ofmembership renewals and payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-8 px-3">
+        <div class="flex justify-center gap-9 max-md:flex-col place-items-center">
+            <div>
+                <img src="landingimg2.png" alt="">
+            </div>
+
+            <div class="w-[40%] flex gap-4 flex-col">
+                <h1 class="text-[20px] font-semibold">The unseen of spending three years at Pixelgrade</h1>
+                <p class="text-gray-500 text-[10px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                    quaerat, eum veritatis corrupti harum consequatur pariatur in cupiditate repellendus accusamus
+                    doloremque quia! Non quos molestias, perferendis facere architecto consequuntur earum?</p>
+
+                <button class="bg-green-600 text-white w-[90px] h-[36px] rounded-[3px] text-[11px]">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-100 px-3">
+        <div class="flex justify-evenly py-9 max-sm:flex-col place-items-center">
+            <div>
+                <h1 class="text-[18px] font-bold">Helping a local <br /> <span class="text-green-600">business reinvent
+                        itself</span></h1>
+                <p class="text-gray-500 text-[10px]">We reached here with out hand work and dedication</p>
+            </div>
+            <div class="flex gap-6 max-md:flex-col">
+                <div>
+                    <div class="flex items-center gap-3 p-3">
+                        <i class="fa-solid fa-user-group text-[25px] text-green-600"></i>
+                        <div>
+                            <h1 class="text-[18px] font-bold">2,245,341</h1>
+                            <p class="text-gray-500 text-[10px]">Member</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3">
+                        <i class="fa-solid fa-handshake text-[25px] text-green-600"></i>
+                        <div>
+                            <h1 class="text-[18px] font-bold">46,345</h1>
+                            <p class="text-gray-500 text-[10px]">Clubs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-3 p-3">
+                        <i class="fa-solid fa-hand-pointer text-[25px] text-green-600"></i>
+                        <div>
+                            <h1 class="text-[18px] font-bold">884,454</h1>
+                            <p class="text-gray-500 text-[10px]">Event Bookings</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3">
+                        <i class="fa-solid fa-credit-card text-[25px] text-green-600"></i>
+                        <div>
+                            <h1 class="text-[18px] font-bold">1,235,456</h1>
+                            <p class="text-gray-500 text-[10px]">Payments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-white py-10 px-3">
+        <div class="max-md:flex-col flex justify-center place-items-center gap-9">
+            <div>
+                <img src="landingimg3.png" alt="">
+            </div>
+            <div class="w-[40%] flex gap-4 flex-col">
+                <h1 class="text-[20px] font-semibold">How to design your site footer like we did</h1>
+                <p class="text-gray-500 text-[10px]">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+                    augue nec tincidunt molestic, massa nunc varius arcu, at secelerisque elit erat a magna. Donec ques
+                    erat at libero ultrices mollis. In euismod augue vitae nisi ultricies, non aliquet urna tincidunnt.
+                    Integer in nisi eget nulla commodo faucibus efficiteu quis massa. Praesnet fells est, finibys et
+                    nisi ac, hendreit venenatis liberoo. Donec consectetur faucibus ipsum id gravidaa.</p>
+
+                <button class="bg-green-600 text-white w-[90px] h-[36px] rounded-[3px] text-[11px]">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-50 py-9 px-3">
+        <div class="flex justify-center items-center gap-9">
+            <div>
+                <img src="landingimg4.png" alt="">
+            </div>
+            <div class="max-md:hidden w-[530px] flex flex-col gap-2">
+                <p class="text-[11px] text-gray-500">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+                    lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero
+                    ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet
+                    elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis
+                    tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti.
+                    Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget
+                    efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
+                <h1 class="text-[13px] font-semibold text-green-600">Tim Smith</h1>
+                <p class="text-[11px] text-gray-500">British Dragon Boat Racing Association</p>
+
+                <div class="flex gap-8 text-[25px] py-2">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                    <i class="fa-brands fa-square-threads"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <h1 class="text-green-500 text-[13px] font-semibold">
+                        Meet all customers <i class="fa-solid fa-arrow-right-long"></i>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center bg-white py-9 px-3">
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+                <h1 class="text-[20px] font-semibold">Caring is the new marketing</h1>
+                <p class="text-gray-500 text-[10px]">The Nextcent blog is the best place to read about the latest
+                    membership insights, <br /> trends and more. See who's joining the community, read about how our
+                    community <br /> are increasing their membership income and lot's more.​
+                </p>
+            </div>
+            <div class="max-md:flex-col flex justify-center gap-9">
+                <img src="1.png" alt="">
+                <img src="2.png" alt="">
+                <img src="3.png" alt="">
+            </div>
+
+            <div class="flex items-center flex-col gap-3">
+                <h1 class="text-3xl font-semibold">Pellentesque suscipit <br /> fringilla libero eu.</h1>
+                <button class="bg-green-600 text-white w-[130px] h-[36px] rounded-[3px] text-[11px]">Get a Demo <i
+                        class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#263238] text-white py-10 px-3">
+        <div class="max-md:flex-col  flex justify-around">
+            <div class="flex flex-col gap-4">
+                <h1 class="font-bold">Nexcent</h1>
+                <p class="text-[9px] text-gray-300">Copyrighy @ 2020 Landify UI Kit. <br /> All righy reserved</p>
+                <div class="flex gap-3 text-gray-300">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                    <i class="fa-brands fa-square-threads"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+
+            </div>
+            <div class="flex gap-20 max-md:flex-col">
+                <div class="flex flex-col gap-2">
+                    <h1 class="font-semibold text-[14px]">Company</h1>
+                    <div class="text-[9px] text-gray-300 flex flex-col gap-2">
+                        <a href="#">About us</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact us</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Testimonals</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h1 class="font-semibold text-[14px]">Support</h1>
+                    <div class="text-[9px] text-gray-300 flex flex-col gap-2">
+                        <a href="#">Help center</a>
+                        <a href="#">Terms of service</a>
+                        <a href="#">Legal</a>
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Status</a>
+                    </div>
+                </div>
+                <div class="max-md:hidden flex flex-col gap-2">
+                    <h2 class="font-semibold text-[14px]">Stay up to data</h2>
+                    <div class="flex justify-end items-center relative">
+                        <input class="bg-gray-500 rounded-md text-[12px] text-white pl-2 py-1 w-45" type="text"
+                            placeholder="Your email address">
+                        <i class="fa-solid fa-location-arrow absolute pr-6"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

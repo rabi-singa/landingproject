@@ -1,0 +1,352 @@
+.main{
+            margin: 0;
+            background-color: navy;
+        }
+        nav{
+            position: fixed;
+            width: 98%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            align-items: center;
+            border: none;
+            font-size: 20px;
+        }
+        .firstWrap{
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+        nav > i{
+            font-size: 30px;
+        }
+        nav > h3{
+            margin: 15px;
+            border-bottom: solid white 2px;
+        }
+        .search{
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .left-icon{
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            translate: -50% -50%;
+            color: black;
+        }
+        .right-icon{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            translate: -50% -50%;
+            color: black;
+        }
+        .search input{
+            border-radius: 20px;
+            padding: 10px 40px;
+        }
+        .navimages{
+            display: flex;
+            gap: 25px;
+        }
+        .navimage{
+            width: 40px;
+            height: 40px;
+            border-radius: 15px;  
+        }
+        .navIcon{
+            display: flex;
+            align-items: center;
+        }
+        .first{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 90px;
+        }
+        .middle{
+            display: flex;
+            justify-content: space-between;
+            width: 550px;
+            height: 40vh;
+            margin: 40px;
+            gap: 15px;
+            border-radius: 5px;
+            background-color:rgba(255, 255, 255, 0.73);
+            box-shadow: 2px 2px 25px 2px black;
+        }
+        .middle > img{
+            border-radius: 5px;
+        }
+        .details{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .details > h3{
+            border-bottom: solid black 1px;
+        }
+        .link{
+            display: flex;
+            gap: 9px;
+        }
+        .link i{
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .link a{
+            text-decoration: none;
+            font-size: 10px;
+            color: navy;
+        }
+        .linkicon{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .imag{
+            padding: 13px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .image{
+            background-color: rgba(0, 0, 0, 0.616);
+            width: 150px;
+            height: 140px;
+            padding: 0 15px;
+            border-radius: 50%;
+        }
+        .imag h3{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            color: rgb(211, 210, 210);
+            text-shadow: 2px 2px 7px rgba(176, 6, 6, 0.813);
+        }
+        .second{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 60px 0;
+            color: white;
+        }
+        .photo{
+            width: 450px;
+            height: 300px;
+            border-radius: 9px;
+        }
+        .details1{
+            width: 400px;
+        }
+        .details1 h1{
+            border-bottom: 1px solid white;
+        }
+        .second button{
+            font-size: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .button{
+            display: flex;
+            gap: 15px;
+
+        }
+        .button1{
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        .button2{
+            border: solid red 1px;
+        }
+        .third{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 60px 0;
+            color: white;
+        }
+        .third button{
+            font-size: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .forth{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 60px 0;
+            color: white;
+        }
+        .forth button{
+            font-size: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .fifth{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 60px 0;
+            color: white;
+        }
+        .fifth button{
+            font-size: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        footer{
+            padding: 20px 0 0 0;
+            color: white;
+        }
+        .footerMainWrapper{
+            background-color: grey;
+            padding: 50px 0;
+        }
+        .footerWrapper{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 30px 0;
+            border-bottom: 1px solid gray;
+        }
+        .about{
+            width: 200px;
+        }
+        .aboutWrapper{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .aboutWrapper i{
+            color: rgb(243, 108, 131);
+            font-size: 25px;
+        }
+        .firstPara{
+            margin-top: 0;
+        }
+        .about > p{
+            margin: 0;
+        }
+        .aboutWrap i{
+            color: rgb(243, 108, 131);
+        }
+        .aboutWrap{
+            display: flex;
+            align-items: baseline;
+            gap: 9px;
+        }
+        input{
+            border: solid black 2px;
+            border-radius: 9px;
+            padding: 7px;
+        }
+        .news{
+            width: 200px;
+        }
+        .newTopWrapper{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .newTopWrapper i{
+            color: rgb(243, 108, 131);
+            font-size: 25px;
+        }
+        .newsWrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .newsWrapper p{
+            margin: 0;
+        }
+        
+        .wrapper{
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .date{
+            color: rgba(255, 255, 255, 0.571);
+            font-size: 10px;
+            
+        }
+        .dateNPara{
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+        .footerImage{
+            width: 60px;
+            height: 60px;
+        }
+        
+
+        .information{
+            width: 200px;
+        }
+
+
+        .information{
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            
+        }
+        .informationWrapper{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .informationWrapper i{
+            color: rgb(243, 108, 131);
+            font-size: 25px;
+        }
+        .information a{
+            text-decoration: none;
+        }
+        .instagram{
+            width: 200px;
+        }
+        
+        .igWrapper{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .igWrapper i{
+            color: rgb(243, 108, 131);
+            font-size: 25px;
+        }
+        .igImge{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+        .igImg{
+            width: 70px;
+            height: 50px;
+        }
+        .lowerPara{
+            display: flex;
+            justify-content: space-around;
+        }
+        .name{
+            color: rgb(243, 108, 131);
+        }
+        .lowerPara i{
+            color: rgb(243, 108, 131);
+        }
