@@ -34,7 +34,7 @@ let remainder = x % y;
 
 
 // if statement
-let condition = 61%3 == 0;
+let condition = 60%3 == 0;
 
 if (condition) {
   console.log("true"); 
