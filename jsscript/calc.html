@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calc</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <button onclick="order(9000, 4)">click</button>
+  <p id="display"></p>
+
+  <input id="input" type="text">
+  <button onclick="show()">Try</button>
+
+  <script>
+
+    // function add(a, b) {
+    //   let c = a + b;
+    //   console.log("add: " + c);
+    // }
+    // function sub(a, b) {
+    //   let c = a - b;
+    //   console.log("sub: " + c);
+    // }
+    // add(10, 5.5);
+    // sub(10, 5.5);
+
+
+    // amount >= 10000  = 20% discount 
+    // distance <= 5km = 1day : 2days 
+    function order(amount, distance){
+      let discount = "";
+      let delivery = "";
+
+      // discount
+      if(amount >= 10000){
+        discount = "You get 20% discount. ";
+      } else {
+        discount = "You get no discount.";
+      }
+
+      // delivery
+      if(distance <= 5){
+        delivery = "The order will be delivered in 1 day.";
+      } else {
+        delivery = "The order will be delivered in 2 days.";
+      }
+
+      const display = document.getElementById("display");
+      display.innerText += `${discount} ${delivery}`;
+    }
+
+  </script>
+</body>
+</html>
