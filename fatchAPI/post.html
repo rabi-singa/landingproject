@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POST Method</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+  
+  <h1>POST Method</h1>
+  <h1>Add New Student</h1>
+
+
+  <form onsubmit="handleSubmit(event)" class="grid w-100 mx-auto">
+    <label for="">name</label>
+    <input type="text" name="name" class="bg-gray-200"/>
+
+    <label for="">phone</label>
+    <input type="text" name="phone" class="bg-gray-200"/>
+
+    <label for="">whatsapp</label>
+    <input type="text" name="whatsapp" class="bg-gray-200"/>
+
+    <label for="">email</label>
+    <input type="text" name="email" class="bg-gray-200"/>
+
+    <label for="">remark</label>
+    <input type="text" name="remark" class="bg-gray-200"/>
+
+    <label for="">registrationNo</label>
+    <input type="text" name="registrationNo" class="bg-gray-200"/>
+
+    <label for="">courseId</label>
+    <input type="text" name="courseId" value="69973fe5680f1da6f754db0" disabled class="bg-gray-200"/>
+    
+    <button type="submit" id="submit_btn" class="bg-blue-400 mt-5">
+      Add Student
+    </button>
+  </form>
+
+  <section id="display" class="w-100 mx-auto my-5 space-y-5">
+    
+  </section>
+
+  <script>
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      
+      const newStudent = {
+        name: e.target.name.value,
+        phone: e.target.phone.value,
+        whatsapp: e.target.whatsapp.value,
+        email: e.target.email.value,
+        registrationNo: e.target.registrationNo.value,
+        remark: e.target.remark.value,
+        courseId: e.target.courseId.value,
+      }
+
+
+      // submitting form
+      const submitBtn = document.getElementById("submit_btn");
+      const display = document.getElementById("display");
+      try {
+        // loading state (btn)
+        submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch animate-spin"></i>`;
+        submitBtn.disabled = true;
+
+        // create student
+        const response = await fetch("http://localhost:5050/api/student/create", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(newStudent)
+        })
+        // collecting data as JSON
+        const data = await response.json();
+        
+        // handle error 
+        if (!data.success) {
+          throw new Error(data.message || "test");
+        }
+
+        // display new student data from backend
+        display.innerHTML = `
+          <div class="bg-gray-100 p-5">
+            <img src="https://cdn-icons-gif.flaticon.com/19009/19009714.gif" alt="" class="h-10 w-10">
+            <h1 class="text-center text-green-600 font-bold text-lg">New Student Added</h1>
+            <h1>${data.student.name}</h1>
+            <h1>ID: ${data.student._id}</h1>
+          </div>
+        `;
+
+        // reset form
+        e.target.reset();
+
+      } catch (error) {
+
+        // display error message
+        display.innerHTML = `
+          <div class="bg-gray-100 p-5">
+            <h1 class="text-center text-red-600 font-bold text-lg">Failed</h1>
+            <h1>${error.message}</h1>
+          </div>
+        `;
+
+        // hide error message
+        setTimeout(() => {
+          display.innerHTML = ``;
+        }, 3000);
+
+      } finally {
+
+        // close loading state (btn)
+        await setTimeout(() => {
+          submitBtn.innerHTML = `Add Student`;
+          submitBtn.disabled = false;
+        }, 3000);
+      }
+    }
+
+  </script>
+</body>
+</html>

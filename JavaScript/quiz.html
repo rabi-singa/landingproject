@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Quiz Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center mb-4">Quiz App</h1>
+
+    <div id="quiz-container">
+      <h2 id="question" class="text-lg font-semibold mb-4"></h2>
+      <div id="answers" class="space-y-2"></div>
+      <button id="nextBtn"
+        class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded hidden">
+        Next Question
+      </button>
+    </div>
+
+    <div id="result" class="hidden text-center">
+      <h2 class="text-xl font-bold mb-4">Quiz Finished 🎉</h2>
+      <p id="score" class="text-lg"></p>
+      <button onclick="restartQuiz()"
+        class="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+        Restart Quiz
+      </button>
+    </div>
+  </div>
+
+<script>
+const quizData = [
+  {
+    question: "Which language runs in the browser?",
+    answers: ["Java", "C", "Python", "JavaScript"],
+    correct: 3
+  },
+  {
+    question: "What does CSS stand for?",
+    answers: [
+      "Central Style Sheets",
+      "Cascading Style Sheets",
+      "Computer Style Sheets",
+      "Creative Style System"
+    ],
+    correct: 1
+  },
+  {
+    question: "Which HTML tag is used for JavaScript?",
+    answers: ["<js>", "<script>", "<javascript>", "<code>"],
+    correct: 1
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionEl = document.getElementById("question");
+const answersEl = document.getElementById("answers");
+const nextBtn = document.getElementById("nextBtn");
+const resultEl = document.getElementById("result");
+const scoreEl = document.getElementById("score");
+const quizContainer = document.getElementById("quiz-container");
+
+function loadQuestion() {
+  resetState();
+  const currentQuiz = quizData[currentQuestion];
+  questionEl.textContent = currentQuiz.question;
+
+  currentQuiz.answers.forEach((answer, index) => {
+    const button = document.createElement("button");
+    button.textContent = answer;
+    button.className =
+      "w-full bg-gray-200 hover:bg-gray-300 py-2 rounded text-left px-3";
+    button.onclick = () => selectAnswer(index);
+    answersEl.appendChild(button);
+  });
+}
+
+function resetState() {
+  nextBtn.classList.add("hidden");
+  answersEl.innerHTML = "";
+}
+
+function selectAnswer(index) {
+  const correct = quizData[currentQuestion].correct;
+  const buttons = answersEl.children;
+
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+    if (i === correct) {
+      buttons[i].classList.add("bg-green-400");
+    } else if (i === index) {
+      buttons[i].classList.add("bg-red-400");
+    }
+  }
+
+  if (index === correct) score++;
+  nextBtn.classList.remove("hidden");
+}
+
+nextBtn.addEventListener("click", () => {
+  currentQuestion++;
+  if (currentQuestion < quizData.length) {
+    loadQuestion();
+  } else {
+    showResult();
+  }
+});
+
+function showResult() {
+  quizContainer.classList.add("hidden");
+  resultEl.classList.remove("hidden");
+  scoreEl.textContent = `You scored ${score} out of ${quizData.length}`;
+}
+
+function restartQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  resultEl.classList.add("hidden");
+  quizContainer.classList.remove("hidden");
+  loadQuestion();
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>

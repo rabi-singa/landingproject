@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Open the browser console (F12) to play the game!</h1>
+    <script>
+        const choices = ["rock", "paper", "scissors"];
+
+/**
+ * Generates a random choice for the computer.
+ * @returns {string} The computer's choice.
+ */
+function getComputerChoice() {
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
+}
+
+/**
+ * Plays a single round of Rock Paper Scissors.
+ * @param {string} playerSelection - The player's choice (rock, paper, or scissors).
+ * @param {string} computerSelection - The computer's choice.
+ * @returns {string} A message indicating the result of the round.
+ */
+function playRound(playerSelection, computerSelection) {
+  // Normalize inputs to lowercase for consistent comparison
+  const player = playerSelection.toLowerCase();
+  const computer = computerSelection.toLowerCase();
+
+  // Define the winning conditions using an object
+  const winConditions = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper"
+  };
+
+  if (player === computer) {
+    return `It's a tie! Both chose ${player}.`;
+  } else if (winConditions[player] === computer) {
+    return `You won! ${player} beats ${computer}!`;
+  } else {
+    return `You lost! ${computer} beats ${player}.`;
+  }
+}
+
+// --- Example Usage (Run this in your browser's console) ---
+const playerSelection = prompt("Enter your choice: rock, paper, or scissors");
+if (playerSelection && choices.includes(playerSelection.toLowerCase())) {
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection));
+} else {
+  console.log("Invalid selection. Please enter rock, paper, or scissors.");
+}
+
+    </script>
+</body>
+</html>
