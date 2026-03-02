@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AND & OR</title>
+</head>
+<body>
+  <h1>AND & OR</h1>
+
+ 
+  <script>
+    const y = null;
+    if (y){                // c da twrec "y" c gi value ywbra hangbani ywdrabani na false lkani ywragana true lkani (c da di ywdrabanina false lka)
+      console.log("true");
+    } else {
+      console.log("false");
+    }
+
+
+ 
+
+
+    const x = 5;
+    const z = null;
+    if(x || z){             // c na x nattraga z c anic gi manungda ama value ywradi yare 
+      console.log("true");
+    } else {
+      console.log("false");
+    }
+
+
+
+
+
+    const r = 5;
+    if (!r){            // negitive oiba ywdabra c ni
+      console.log("true");
+    } else {
+      console.log("false");
+    }
+
+
+    const q = 5;
+    const s = null;
+    const t = null;
+    const u = null;
+    if (!q || !s){
+      console.log("true");
+    } else {
+      console.log("false");
+    }
+
+
+
+
+    
+    
+
+    const i = 5;
+    const j = null;
+    const k = null;
+    const l = null;
+    if (i && j){           // ani mak ta ywgadaba ama ywdabafa false lkani
+      console.log("ture");
+    } else {
+      console.log("false");
+    }
+
+
+
+
+
+    const a = 5;
+    const b = 20;
+    const c = null;
+    const d = 52;
+
+    if ((a || b) && (c || d)) {
+      console.log("true");
+    } else {
+      console.log("false");
+    }
+    
+  </script>
+</body>
+</html>
